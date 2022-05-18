@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20220519 03:18:09.941" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.15 on darwin)">
+<suite source="/Users/supkit/Desktop/Pomelo-Assignment-QA-Kit/Part02_Robot/pomelo.robot" id="s1" name="Pomelo">
+<test id="s1-t1" name="Pomelo Assignment: Part02">
+<kw name="Log" library="BuiltIn">
+<arg>Please go to https://www.pomelofashion.com/th/en/ and focus automate testing on "My Shopping Bag" page</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:10.050" level="INFO">Please go to https://www.pomelofashion.com/th/en/ and focus automate testing on "My Shopping Bag" page</msg>
+<status status="PASS" endtime="20220519 03:18:10.051" starttime="20220519 03:18:10.050"/>
+</kw>
+<kw name="OPEN AND LOGIN WEBSITE" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BWS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 03:18:10.051" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" endtime="20220519 03:18:22.199" starttime="20220519 03:18:10.051"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${HEADPAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:22.402" starttime="20220519 03:18:22.199"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${OPEN_LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:22.402" level="INFO">Clicking element '//button[@data-cy="nav_login"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:23.187" starttime="20220519 03:18:22.402"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${EMAIL_TEXTBOX}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:23.187" level="INFO">Typing text 'suppakrit@outlook.com' into text field '//input[@id="Email"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:24.044" starttime="20220519 03:18:23.187"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${PASSW_TEXTBOX}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:24.045" level="INFO">Typing text 'supkitpomelo230742' into text field '//input[@id="Password"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:24.341" starttime="20220519 03:18:24.044"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:24.341" level="INFO">Clicking element '//button[@data-cy="auth__login__email__button"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:24.583" starttime="20220519 03:18:24.341"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>${OPEN_LOGIN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" endtime="20220519 03:18:30.942" starttime="20220519 03:18:24.583"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:30.942" starttime="20220519 03:18:10.051"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>A customer adds the products any cetegory and click "Cart" Icon</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:30.943" level="INFO">A customer adds the products any cetegory and click "Cart" Icon</msg>
+<status status="PASS" endtime="20220519 03:18:30.943" starttime="20220519 03:18:30.942"/>
+</kw>
+<kw name="ADD ITEM" library="resource">
+<arg>Sustainable Puffed Sleeve Denim Dress - Blue</arg>
+<arg>M</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:30.943" level="INFO">Clicking element '//li[@data-cy="nav_user__search"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:31.336" starttime="20220519 03:18:30.943"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SEARCH_TEXTBOX}</arg>
+<arg>${item_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:31.336" level="INFO">Typing text 'Sustainable Puffed Sleeve Denim Dress - Blue' into text field '//input[@placeholder="What are you looking for today?..."]'.</msg>
+<status status="PASS" endtime="20220519 03:18:31.895" starttime="20220519 03:18:31.336"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>${SEARCH_TEXTBOX}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220519 03:18:31.896" level="INFO">Sending key(s) (u'RETURN',) to //input[@placeholder="What are you looking for today?..."] element.</msg>
+<msg timestamp="20220519 03:18:32.173" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220519 03:18:32.173" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" endtime="20220519 03:18:32.212" starttime="20220519 03:18:31.896"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//span[text()="${item_name}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:33.915" starttime="20220519 03:18:32.212"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//span[text()="${item_name}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:33.916" level="INFO">Clicking element '//span[text()="Sustainable Puffed Sleeve Denim Dress - Blue"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:34.046" starttime="20220519 03:18:33.915"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[text()="${item_size}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:36.101" starttime="20220519 03:18:34.046"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//button[text()="${item_size}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:36.102" level="INFO">Clicking element '//button[text()="M"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:36.187" starttime="20220519 03:18:36.101"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ADD_BAG_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:36.187" level="INFO">Clicking element '//span[text()="Add To Bag"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:36.282" starttime="20220519 03:18:36.187"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ADDED_ALERT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:38.590" starttime="20220519 03:18:36.283"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CLOSE_BAG_NOTICE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:38.591" level="INFO">Clicking element '//span[@data-cy="close_cart_notice"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:38.882" starttime="20220519 03:18:38.590"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:38.882" starttime="20220519 03:18:30.943"/>
+</kw>
+<kw name="ADD ITEM" library="resource">
+<arg>Abstract Print Crop Top - White</arg>
+<arg>M</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:38.883" level="INFO">Clicking element '//li[@data-cy="nav_user__search"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:38.961" starttime="20220519 03:18:38.883"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SEARCH_TEXTBOX}</arg>
+<arg>${item_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:38.961" level="INFO">Typing text 'Abstract Print Crop Top - White' into text field '//input[@placeholder="What are you looking for today?..."]'.</msg>
+<status status="PASS" endtime="20220519 03:18:39.027" starttime="20220519 03:18:38.961"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>${SEARCH_TEXTBOX}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220519 03:18:39.028" level="INFO">Sending key(s) (u'RETURN',) to //input[@placeholder="What are you looking for today?..."] element.</msg>
+<msg timestamp="20220519 03:18:39.316" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220519 03:18:39.316" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" endtime="20220519 03:18:39.978" starttime="20220519 03:18:39.027"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//span[text()="${item_name}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:40.424" starttime="20220519 03:18:39.978"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//span[text()="${item_name}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:40.425" level="INFO">Clicking element '//span[text()="Abstract Print Crop Top - White"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:40.498" starttime="20220519 03:18:40.424"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[text()="${item_size}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:41.657" starttime="20220519 03:18:40.498"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//button[text()="${item_size}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:41.657" level="INFO">Clicking element '//button[text()="M"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:41.709" starttime="20220519 03:18:41.657"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ADD_BAG_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:41.709" level="INFO">Clicking element '//span[text()="Add To Bag"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:41.788" starttime="20220519 03:18:41.709"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ADDED_ALERT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:43.029" starttime="20220519 03:18:41.788"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CLOSE_BAG_NOTICE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:43.030" level="INFO">Clicking element '//span[@data-cy="close_cart_notice"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:43.090" starttime="20220519 03:18:43.030"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:43.091" starttime="20220519 03:18:38.882"/>
+</kw>
+<kw name="OPEN SHOPPIBG BAG" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${OPEN_BAG_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:43.091" level="INFO">Clicking element '//*[@data-cy="nav_user__cart"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:43.302" starttime="20220519 03:18:43.091"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:43.302" starttime="20220519 03:18:43.091"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>A customer be able to adjusts quantity of product items or items.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:43.303" level="INFO">A customer be able to adjusts quantity of product items or items.</msg>
+<status status="PASS" endtime="20220519 03:18:43.303" starttime="20220519 03:18:43.303"/>
+</kw>
+<kw name="ADJUSTS ITEM QUANTITY AND CHECK" library="resource">
+<arg>Sustainable Puffed Sleeve Denim Dress - Blue</arg>
+<arg>3</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../div/div/div/div/div/select</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:43.337" starttime="20220519 03:18:43.303"/>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../div/div/div/div/div/select</arg>
+<arg>${item_number}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220519 03:18:43.337" level="INFO">Selecting options from selection list '//a[text()="Sustainable Puffed Sleeve Denim Dress - Blue"]/../../../div/div/div/div/div/select' by label 3.</msg>
+<status status="PASS" endtime="20220519 03:18:43.539" starttime="20220519 03:18:43.337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:44.083" starttime="20220519 03:18:43.539"/>
+</kw>
+<kw name="List Selection Should Be" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../div/div/div/div/div/select</arg>
+<arg>${item_number}</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220519 03:18:44.084" level="INFO">Verifying list '//a[text()="Sustainable Puffed Sleeve Denim Dress - Blue"]/../../../div/div/div/div/div/select' has option [ 3 ] selected.</msg>
+<msg timestamp="20220519 03:18:44.090" level="INFO">Current page contains list '//a[text()="Sustainable Puffed Sleeve Denim Dress - Blue"]/../../../div/div/div/div/div/select'.</msg>
+<status status="PASS" endtime="20220519 03:18:44.152" starttime="20220519 03:18:44.083"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:44.152" starttime="20220519 03:18:43.303"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>A customer be able to adjusts size of product items or items.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:44.152" level="INFO">A customer be able to adjusts size of product items or items.</msg>
+<status status="PASS" endtime="20220519 03:18:44.152" starttime="20220519 03:18:44.152"/>
+</kw>
+<kw name="ADJUSTS ITEM SIZE AND CHECK" library="resource">
+<arg>Abstract Print Crop Top - White</arg>
+<arg>XXL</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../div/div/div/div/select</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:44.164" starttime="20220519 03:18:44.153"/>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../div/div/div/div/select</arg>
+<arg>${item_number}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220519 03:18:44.165" level="INFO">Selecting options from selection list '//a[text()="Abstract Print Crop Top - White"]/../../../div/div/div/div/select' by label XXL.</msg>
+<status status="PASS" endtime="20220519 03:18:44.293" starttime="20220519 03:18:44.164"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:44.842" starttime="20220519 03:18:44.293"/>
+</kw>
+<kw name="List Selection Should Be" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../div/div/div/div/select</arg>
+<arg>${item_number}</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220519 03:18:44.843" level="INFO">Verifying list '//a[text()="Abstract Print Crop Top - White"]/../../../div/div/div/div/select' has option [ XXL ] selected.</msg>
+<msg timestamp="20220519 03:18:44.851" level="INFO">Current page contains list '//a[text()="Abstract Print Crop Top - White"]/../../../div/div/div/div/select'.</msg>
+<status status="PASS" endtime="20220519 03:18:45.116" starttime="20220519 03:18:44.842"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:45.116" starttime="20220519 03:18:44.152"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>A customer be able to adjust and delete product items or items.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:45.116" level="INFO">A customer be able to adjust and delete product items or items.</msg>
+<status status="PASS" endtime="20220519 03:18:45.116" starttime="20220519 03:18:45.116"/>
+</kw>
+<kw name="ADJUSTS DELETE ITEM AND CHECK" library="resource">
+<arg>Abstract Print Crop Top - White</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../../div/div[@role="button"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:45.132" starttime="20220519 03:18:45.117"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../../div/div[@role="button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:45.132" level="INFO">Clicking element '//a[text()="Abstract Print Crop Top - White"]/../../../../div/div[@role="button"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:45.220" starttime="20220519 03:18:45.132"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" endtime="20220519 03:18:45.225" starttime="20220519 03:18:45.220"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:45.225" starttime="20220519 03:18:45.116"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>A customer be able to fill-in and click apply promo code. (even if promocode is not eligible)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:45.226" level="INFO">A customer be able to fill-in and click apply promo code. (even if promocode is not eligible)</msg>
+<status status="PASS" endtime="20220519 03:18:45.226" starttime="20220519 03:18:45.225"/>
+</kw>
+<kw name="FILL IN PROMO CODE" library="resource">
+<arg>TestPromoCode</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${PROMO_TEXTBOX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:45.726" starttime="20220519 03:18:45.226"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${PROMO_TEXTBOX}</arg>
+<arg>${promo_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:45.727" level="INFO">Typing text 'TestPromoCode' into text field '//input[@placeholder="Enter Promo Code"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:45.848" starttime="20220519 03:18:45.726"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${APPLY_PROMO_CODE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:45.848" level="INFO">Clicking element '//button/span[text()="Apply"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:45.951" starttime="20220519 03:18:45.848"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:45.951" starttime="20220519 03:18:45.226"/>
+</kw>
+<kw name="CHECK PROMO CODE INVALID" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${PROMO_CODE_INVALID_ALERT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:46.177" starttime="20220519 03:18:45.951"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:46.177" starttime="20220519 03:18:45.951"/>
+</kw>
+<kw name="FILL IN PROMO CODE" library="resource">
+<arg>GET30TH</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${PROMO_TEXTBOX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:46.186" starttime="20220519 03:18:46.177"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${PROMO_TEXTBOX}</arg>
+<arg>${promo_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:46.186" level="INFO">Typing text 'GET30TH' into text field '//input[@placeholder="Enter Promo Code"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:46.240" starttime="20220519 03:18:46.186"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${APPLY_PROMO_CODE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:46.240" level="INFO">Clicking element '//button/span[text()="Apply"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:46.310" starttime="20220519 03:18:46.240"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:46.310" starttime="20220519 03:18:46.177"/>
+</kw>
+<kw name="CHECK PROMO CODE VALID" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${PROMO_CODE_USED}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:48.026" starttime="20220519 03:18:46.310"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:48.026" starttime="20220519 03:18:46.310"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>A customer be able to validate proceed to checkout button.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:48.027" level="INFO">A customer be able to validate proceed to checkout button.</msg>
+<status status="PASS" endtime="20220519 03:18:48.027" starttime="20220519 03:18:48.027"/>
+</kw>
+<kw name="CHECK OUT FROM BAG AND CHECK" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CHECK_OUT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:18:48.027" level="INFO">Clicking element '//button/span[text()="Check out now"]'.</msg>
+<status status="PASS" endtime="20220519 03:18:48.081" starttime="20220519 03:18:48.027"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${SHIPPING_STEP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:48.872" starttime="20220519 03:18:48.081"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${PAYMENT_STEP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:48.884" starttime="20220519 03:18:48.873"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${CONFIRM_STEP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:18:48.907" starttime="20220519 03:18:48.884"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:48.907" starttime="20220519 03:18:48.027"/>
+</kw>
+<kw type="TEARDOWN" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220519 03:18:49.006" starttime="20220519 03:18:48.908"/>
+</kw>
+<status status="PASS" endtime="20220519 03:18:49.006" starttime="20220519 03:18:10.050"/>
+</test>
+<test id="s1-t2" name="RESET SHOPPING BAG: For can run AUTOMATE Script Again">
+<kw name="Log" library="BuiltIn">
+<arg>Reset Shopping Bag</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 03:18:49.007" level="INFO">Reset Shopping Bag</msg>
+<status status="PASS" endtime="20220519 03:18:49.007" starttime="20220519 03:18:49.007"/>
+</kw>
+<kw name="OPEN AND LOGIN WEBSITE" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BWS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 03:18:49.008" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" endtime="20220519 03:19:01.902" starttime="20220519 03:18:49.007"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${HEADPAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:19:02.100" starttime="20220519 03:19:01.903"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${OPEN_LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:19:02.100" level="INFO">Clicking element '//button[@data-cy="nav_login"]'.</msg>
+<status status="PASS" endtime="20220519 03:19:02.816" starttime="20220519 03:19:02.100"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${EMAIL_TEXTBOX}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:19:02.816" level="INFO">Typing text 'suppakrit@outlook.com' into text field '//input[@id="Email"]'.</msg>
+<status status="PASS" endtime="20220519 03:19:04.044" starttime="20220519 03:19:02.816"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${PASSW_TEXTBOX}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 03:19:04.044" level="INFO">Typing text 'supkitpomelo230742' into text field '//input[@id="Password"]'.</msg>
+<status status="PASS" endtime="20220519 03:19:04.280" starttime="20220519 03:19:04.044"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:19:04.281" level="INFO">Clicking element '//button[@data-cy="auth__login__email__button"]'.</msg>
+<status status="PASS" endtime="20220519 03:19:04.849" starttime="20220519 03:19:04.281"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>${OPEN_LOGIN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" endtime="20220519 03:19:11.354" starttime="20220519 03:19:04.849"/>
+</kw>
+<status status="PASS" endtime="20220519 03:19:11.354" starttime="20220519 03:18:49.007"/>
+</kw>
+<kw name="OPEN SHOPPIBG BAG" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${OPEN_BAG_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:19:11.355" level="INFO">Clicking element '//*[@data-cy="nav_user__cart"]'.</msg>
+<status status="PASS" endtime="20220519 03:19:11.895" starttime="20220519 03:19:11.355"/>
+</kw>
+<status status="PASS" endtime="20220519 03:19:11.895" starttime="20220519 03:19:11.354"/>
+</kw>
+<kw name="ADJUSTS DELETE ITEM AND CHECK" library="resource">
+<arg>Sustainable Puffed Sleeve Denim Dress - Blue</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../../div/div[@role="button"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:19:13.204" starttime="20220519 03:19:11.896"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]/../../../../div/div[@role="button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 03:19:13.204" level="INFO">Clicking element '//a[text()="Sustainable Puffed Sleeve Denim Dress - Blue"]/../../../../div/div[@role="button"]'.</msg>
+<status status="PASS" endtime="20220519 03:19:13.345" starttime="20220519 03:19:13.204"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>//a[text()="${item_name}"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" endtime="20220519 03:19:13.708" starttime="20220519 03:19:13.345"/>
+</kw>
+<status status="PASS" endtime="20220519 03:19:13.709" starttime="20220519 03:19:11.895"/>
+</kw>
+<kw name="CHECK BAG IS EMPTY" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${EMPTY_BAG_ALERT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220519 03:19:13.995" starttime="20220519 03:19:13.709"/>
+</kw>
+<status status="PASS" endtime="20220519 03:19:13.995" starttime="20220519 03:19:13.709"/>
+</kw>
+<kw type="TEARDOWN" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220519 03:19:14.069" starttime="20220519 03:19:13.995"/>
+</kw>
+<status status="PASS" endtime="20220519 03:19:14.069" starttime="20220519 03:18:49.007"/>
+</test>
+<status status="PASS" endtime="20220519 03:19:14.070" starttime="20220519 03:18:09.942"/>
+</suite>
+<statistics>
+<total>
+<stat fail="0" skip="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" skip="0" id="s1" name="Pomelo" pass="2">Pomelo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
