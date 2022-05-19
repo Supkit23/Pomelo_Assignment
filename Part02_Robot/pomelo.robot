@@ -26,8 +26,6 @@ Pomelo Assignment: Part02
     log     A customer be able to fill-in and click apply promo code. (even if promocode is not eligible)
     FILL IN PROMO CODE                  TestPromoCode
     CHECK PROMO CODE INVALID
-    FILL IN PROMO CODE                  GET30TH
-    CHECK PROMO CODE VALID
 
     log     A customer be able to validate proceed to checkout button.
     CHECK OUT FROM BAG AND CHECK
